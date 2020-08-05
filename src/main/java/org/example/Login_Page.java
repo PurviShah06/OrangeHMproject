@@ -53,22 +53,25 @@ public class Login_Page extends MyUtils {
      public void invalidPassword(String invalidPassword){
        waitUntilElementClickable(_password,100);
         sendKeyElements(_password,invalidPassword);
-
      }
 
      //Create method for verify related message while using different data by Using Assert
       public void reletedLoginMessageVerify(String reletedmessage){
 
-          waituntillElmentVisible(_invalidUserName, 300);
+        //  waituntillElmentVisible(_invalidUserName, 300);
+          Sleep1(3);
           Assert.assertEquals(getElement(_invalidUserName), reletedmessage, "Username Can not Empty");
 
-          waituntillElmentVisible(_invalidUserName, 500);
+        //  waituntillElmentVisible(_invalidUserName, 500);
+          Sleep1(3);
           Assert.assertEquals(getElement(_invalidUserName), reletedmessage, "Username Can not Empty");
 
-          waituntillElmentVisible(_invaliddata_blank, 900);
+         // waituntillElmentVisible(_invaliddata_blank, 900);
+          Sleep1(6);
           Assert.assertEquals(getElement(_invaliddata_blank), reletedmessage, "Invalid credential");
 
-          waituntillElmentVisible(_invaliddata_blank, 200);
+         // waituntillElmentVisible(_invaliddata_blank, 200);
+          Sleep1(2);
           Assert.assertEquals(getElement(_invaliddata_blank), reletedmessage, "Invalid Credential");
 
 
@@ -80,7 +83,7 @@ public class Login_Page extends MyUtils {
 
           Assert.assertEquals(getElement(_invaliddata_blank), reletedmessage, "Login Failed");
 
-          waituntillElmentVisible(_invalidPassword, 400);
+         // waituntillElmentVisible(_invalidPassword, 400);
           Assert.assertEquals(getElement(_invalidPassword), reletedmessage, "Password cannot be empty");
       }
 }

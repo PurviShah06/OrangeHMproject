@@ -16,11 +16,11 @@
     Then user should not login successfully and can see  "<related message>".
     Examples:
       | invalid Username | invalid Password | related message          |
-#      |                  | admin123         | Username cannot be empty |
-#      |                  |                  | Username cannot be empty |
-#      | Admin            | admin1234        | Invalid credentials      |
-#      | abccdf           | Admin1234        | Invalid credentials      |
- #     | adsaf            |                  | Password cannot be empty |
-  #   |                  | admin            | Username cannot be empty |
-     | login123         | admin123         | Invalid credentials      |
-   #   | Admin            |                  | Password cannot be empty |
+      |                  | admin123         | Username cannot be empty |
+      |                  |                  | Username cannot be empty |
+      | Admin            | admin1234        | Invalid credentials      |
+      | abccdf           | Admin1234        | Invalid credentials      |
+      | adsaf            |                  | Password cannot be empty |
+      |                  | admin            | Username cannot be empty |
+      | login123         | admin123         | Invalid credentials      |
+      | Admin            |                  | Password cannot be empty |

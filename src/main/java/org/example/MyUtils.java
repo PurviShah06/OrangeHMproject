@@ -57,7 +57,7 @@ public class MyUtils extends BasePage {
         //method for taking screenshot
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileHandler.copy(srcFile, new File("src\\test\\ScreenShots\\" +screenShotName+" .png"));
+            FileHandler.copy(srcFile, new File("src\\test\\Screenshot\\" +screenShotName+" .png"));
 
             //Another way to take ScreenShot by using FileUtils Dependency.
             //   FileUtils.copyFile(srcFile,new File("src\\test\\ScreenShots" +screenShotName+" .png"));
