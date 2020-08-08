@@ -1,12 +1,10 @@
 package org.example;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.File;
-import java.io.IOException;
 
 public class MyUtils extends BasePage {
     public void Sleep1(int time)//Method for Thread Sleep Wait
@@ -53,19 +51,21 @@ public class MyUtils extends BasePage {
         return (System.currentTimeMillis());
     }
 
-        public void screenShot(String screenShotName){
-        //method for taking screenshot
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        try {
-            FileHandler.copy(srcFile, new File("src\\test\\Screenshot\\" +screenShotName+" .png"));
 
-            //Another way to take ScreenShot by using FileUtils Dependency.
-            //   FileUtils.copyFile(srcFile,new File("src\\test\\ScreenShots" +screenShotName+" .png"));
+//        public void screenShot(String screenShotName){
+//        //method for taking screenshot
+//        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//        try {
+//            FileHandler.copy(srcFile, new File("src\\test\\Screenshot\\" +screenShotName+" .png"));
+//
+//            //Another way to take ScreenShot by using FileUtils Dependency.
+//            //   FileUtils.copyFile(srcFile,new File("src\\test\\ScreenShots" +screenShotName+" .png"));
+//
+//        }
+//        catch (IOException e) {
+//            e.printStackTrace();
+//        }}
 
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }}
     public static String getUrl(){
         return driver.getCurrentUrl();
     }

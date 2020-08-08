@@ -36,8 +36,7 @@ public class Login_Page extends MyUtils {
 
     //Create mehtod for click on Login Button.
     public void clickonLoginButton(){
-
-        clickable(_clickonLoginbutton);
+       clickable(_clickonLoginbutton);
     }
 
 ////////////////////////// Methods For Invalid Credentials....................................//////////////////////////////
@@ -66,12 +65,11 @@ public class Login_Page extends MyUtils {
           Sleep1(3);
           Assert.assertEquals(getElement(_invalidUserName), reletedmessage, "Username Can not Empty");
 
-         // waituntillElmentVisible(_invaliddata_blank, 900);
-          Sleep1(6);
+
           Assert.assertEquals(getElement(_invaliddata_blank), reletedmessage, "Invalid credential");
 
          // waituntillElmentVisible(_invaliddata_blank, 200);
-          Sleep1(2);
+
           Assert.assertEquals(getElement(_invaliddata_blank), reletedmessage, "Invalid Credential");
 
 
@@ -83,7 +81,7 @@ public class Login_Page extends MyUtils {
 
           Assert.assertEquals(getElement(_invaliddata_blank), reletedmessage, "Login Failed");
 
-         // waituntillElmentVisible(_invalidPassword, 400);
+
           Assert.assertEquals(getElement(_invalidPassword), reletedmessage, "Password cannot be empty");
       }
 }

@@ -2,7 +2,6 @@ package org.example;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import org.testng.ITestResult;
 
 import java.net.MalformedURLException;
 
@@ -17,12 +16,8 @@ public class Hooks extends MyUtils
     }
     @After
     //create method for close URL
-    public void closeBrowser(ITestResult getresult)
+    public void closeBrowser()
     {//create method
-        if(ITestResult.FAILURE==getresult.getStatus())
-        {
-            screenShot(getresult.getName()+TimeStamp());
-        }
         browserManager.closeApplication();
     }
 }

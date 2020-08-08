@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".",tags ="@Invalid",format ={"pretty","html:target/Destination"})
+@CucumberOptions(features = ".",tags ="@Login",format ={"pretty","html:target/Destination"})
 
     public class RunTest  {
 

@@ -5,13 +5,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.Test;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-@Test
+
 public class BrowserManager extends MyUtils
 {
     static LoadProp loadProp = new LoadProp();
@@ -22,10 +20,10 @@ public class BrowserManager extends MyUtils
     public static final String URL = "https://" + USERNAME + ":" + ACCESSKEY + "@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
    // https://Purvi_mit:9ff1abc9-bfbf-442e-9cc8-493eeb0a64c5@ondemand.eu-central-1.saucelabs.com:443/wd/hub
     //Method for Open HomePage
-  public static final boolean SAUSCE_LAB =false;
+
     public void browserSelector() throws MalformedURLException {
         // If SauceLab is True........................................
-
+       boolean SAUSCE_LAB =true;
         if (SAUSCE_LAB)
         {
 
@@ -89,7 +87,7 @@ public class BrowserManager extends MyUtils
         //window maximize
         driver.manage().window().maximize();
         //default implicit wait for 30 sec to driver instance
-        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
         public void closeApplication ()
        {
